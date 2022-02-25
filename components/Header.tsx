@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Box, Container, Stack, Link as MuiLink } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import NavItemLink from './NavItemLink';
 
 const Header = () => (
   <Box
@@ -25,22 +26,24 @@ const Header = () => (
       </Link>
 
       <Stack direction="row" spacing={3} alignItems={'center'}>
-        <Box>
-          <Link href='/works' passHref>
-            <MuiLink fontWeight={700} underline='none' color='common.black'>works</MuiLink>
-          </Link>
-        </Box>
-        <Box>
-          <Link href='/resume' passHref>
-            <MuiLink fontWeight={700} underline='none' color='common.black'>resume</MuiLink>
-          </Link>
-        </Box>
+        <Link href='/works' passHref>
+          <NavItemLink underline='hover'>works</NavItemLink>
+        </Link>
+
+        <Link href='/resume' passHref>
+          <NavItemLink underline='hover'>resume</NavItemLink>
+        </Link>
+
         <Stack direction="row" spacing={1} alignItems={'center'}>
           <Link href='https://github.com/lukszy-dev' passHref>
-            <MuiLink underline='none' color='common.black'><GitHubIcon/></MuiLink>
+            <NavItemLink target='_blank'>
+              <GitHubIcon sx={{ display: 'block' }} />
+            </NavItemLink>
           </Link>
           <Link href='https://www.linkedin.com/in/łukasz-szypliński/' passHref>
-            <MuiLink underline='none' color='common.black'><LinkedInIcon /></MuiLink>
+            <NavItemLink target='_blank'>
+              <LinkedInIcon sx={{ display: 'block' }} />
+            </NavItemLink>
           </Link>
         </Stack>
       </Stack>

@@ -8,9 +8,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 
 const theme = createTheme({
   typography: {
-    fontFamily: [
-      'Roboto Slab'
-    ].join(',')
+    fontFamily: ['Roboto Slab'].join(',')
   },
   breakpoints: {
     values: {
@@ -20,7 +18,7 @@ const theme = createTheme({
       lg: 1200,
       xl: 1536,
     },
-  },
+  }
 });
 
 const createEmotionCache = () => {

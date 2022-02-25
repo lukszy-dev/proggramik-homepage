@@ -1,9 +1,10 @@
 import { NextPage } from 'next';
 import { Container } from '@mui/material';
 
-import Header from '../components/Layout/Header';
-import Projects from '../components/Layout/Projects';
-import Hero from '../components/Layout/Hero';
+import Header from '../components/Header';
+import Projects from '../components/Projects';
+import Hero from '../components/Hero';
+import Footer from '../components/Footer';
 
 const Index: NextPage = () => (
   <>
@@ -18,6 +19,7 @@ const Index: NextPage = () => (
     >
       <Hero />
       <Projects />
+      <Footer />
     </Container>
   </>
 );
