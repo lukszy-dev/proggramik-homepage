@@ -18,6 +18,22 @@ const theme = createTheme({
       lg: 1200,
       xl: 1536,
     },
+  },
+  components: {
+    MuiDivider: {
+      styleOverrides: {
+        root: {
+          ':after': {
+            borderColor: 'black',
+            borderTopWidth: '3px'
+          },
+          ':before': {
+            borderColor: 'black',
+            borderTopWidth: '3px'
+          }
+        }
+      }
+    }
   }
 });
 

@@ -1,16 +1,26 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import { Box, Container, Stack, Link as MuiLink } from '@mui/material';
+import { Box, Container, Stack, alpha } from '@mui/material';
+import { styled } from '@mui/system';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
 import NavItemLink from './NavItemLink';
+import Logo from './Logo';
+
+const StyledLogo = styled(Logo)(({ theme }) => ({
+  fill: theme.palette.common.black
+}));
 
 const Header = () => (
   <Box
     component='nav'
     sx={{
+      position: 'fixed',
+      width: '100%',
       paddingTop: 3,
-      paddingBottom: 3
+      paddingBottom: 3,
+      backgroundColor: (theme) => alpha(theme.palette.common.white, .95),
+      zIndex: 1
     }}
   >
     <Container
@@ -22,7 +32,7 @@ const Header = () => (
       }}
     >
       <Link href='/' passHref>
-        <a><Image src="/logo.svg" height={36} width={36} /></a>
+        <a><StyledLogo height={36} width={36} /></a>
       </Link>
 
       <Stack direction="row" spacing={3} alignItems={'center'}>
