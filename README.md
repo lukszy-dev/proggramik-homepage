@@ -1,5 +1,7 @@
 # PROGGRAMIK Homepage
 
+![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=proggramik-homepage)
+
 ## Stack
 
 - [Next.js](https://nextjs.org)

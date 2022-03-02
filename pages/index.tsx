@@ -12,7 +12,7 @@ const Index: NextPage = () => (
   <>
     <Header />
     <Container
-      maxWidth="sm"
+      maxWidth='md'
       sx={{
         paddingTop: '90px',
         marginBottom: 4,

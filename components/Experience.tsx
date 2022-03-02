@@ -68,14 +68,33 @@ const Experience = () => {
     <>
       <CustomDivider label='experience' />
 
-      <Stack direction={'row'} sx={{ padding: '1rem 2rem'}}>
-        <Stepper orientation='vertical' connector={<CustomStepConnector />} sx={{ width: '100%' }}>
+      <Stack
+        direction={'row'}
+        sx={{
+          padding: '1rem 2rem'
+        }}
+      >
+        <Stepper
+          orientation='vertical'
+          connector={<CustomStepConnector />}
+          sx={{ width: '100%' }}
+        >
           {POSITIONS.map((element) => (
-            <Step key={element.period} active={true} completed={element.id === step} onMouseEnter={() => setStep(element.id)}>
+            <Step
+              key={element.period}
+              active={true}
+              completed={element.id === step}
+              onMouseEnter={() => setStep(element.id)}
+            >
               <StepLabel StepIconComponent={CustomStepIcon}>
                 <Typography fontWeight={700}>{element.period}</Typography>
               </StepLabel>
-              <StepContent sx={{ borderColor: 'common.black', borderWidth: '3px' }}>
+              <StepContent
+                sx={{
+                  borderColor: theme => theme.palette.common.black,
+                  borderWidth: '3px'
+                }}
+              >
                 <Typography>{element.role}</Typography>
                 <Typography>{element.company}</Typography>
               </StepContent>
@@ -83,11 +102,21 @@ const Experience = () => {
           ))}
         </Stepper>
 
-        <Box sx={{ width: '100%', paddingTop: '8px' }}>
+        <Box
+          sx={{
+            display: {
+              xs: 'none',
+              sm: 'block'
+            },
+            width: '100%',
+            paddingTop: '.5rem',
+            paddingLeft: '1rem'
+          }}
+        >
           Technologies used:
           <ul>
             {(POSITIONS[step - 1].technologies).map((tech) => (
-              <li>{tech}</li>
+              <li key={tech}>{tech}</li>
             ))}
           </ul>
         </Box>

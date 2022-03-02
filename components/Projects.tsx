@@ -31,7 +31,7 @@ const ProjectOverlay = styled('div')(({ theme }) => ({
     height: '100%'
   },
   ':hover': {
-    width: '30%',
+    width: '170px',
     color: theme.palette.common.white,
   }
 }));
@@ -40,10 +40,18 @@ const Projects = () => (
   <>
     <CustomDivider label='works' />
 
-    <Stack spacing={3} padding={2}>
+    <Stack
+      sx={{
+        padding: {
+          xs: '1rem 0',
+          sm: '1rem'
+        }
+      }}
+      spacing={3}
+    >
       <Project>
         <Link href="https://github.com/lukszy-dev/kangaroo" passHref={true}>
-          <a><Image src="/projects/kangaroo.png" layout='fill' objectFit='cover' objectPosition='0 0' /></a>
+          <a><Image alt='kangaroo' src="/projects/kangaroo.png" layout='fill' objectFit='cover' objectPosition='0 0' /></a>
         </Link>
         <ProjectOverlay>
           <Typography fontWeight={700}>
@@ -58,7 +66,7 @@ const Projects = () => (
 
       <Project>
         <Link href="https://github.com/lukszy-dev/platformer" passHref={true}>
-          <a><Image src="/projects/platformer.png" layout='fill' objectFit='cover' objectPosition='0 0' /></a>
+          <a><Image alt='platformer' src="/projects/platformer.png" layout='fill' objectFit='cover' objectPosition='0 0' /></a>
         </Link>
         <ProjectOverlay>
           <Typography fontWeight={700}>

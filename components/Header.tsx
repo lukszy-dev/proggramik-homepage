@@ -24,7 +24,7 @@ const Header = () => (
     }}
   >
     <Container
-      maxWidth="sm"
+      maxWidth='md'
       sx={{
         display: 'flex',
         flexDirection: 'row',
@@ -36,13 +36,13 @@ const Header = () => (
       </Link>
 
       <Stack direction="row" spacing={3} alignItems={'center'}>
-        <Link href='/works' passHref>
+        {/* <Link href='/works' passHref>
           <NavItemLink underline='hover'>works</NavItemLink>
-        </Link>
+        </Link> */}
 
-        <Link href='/resume' passHref>
+        {/* <Link href='/resume' passHref>
           <NavItemLink underline='hover'>resume</NavItemLink>
-        </Link>
+        </Link> */}
 
         <Stack direction="row" spacing={1} alignItems={'center'}>
           <Link href='https://github.com/lukszy-dev' passHref>

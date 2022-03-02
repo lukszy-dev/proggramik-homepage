@@ -17,19 +17,44 @@ const Hero = () => (
         width: '60%'
       }}
     >
-      <Typography gutterBottom fontWeight={900} marginBottom={2}>
+      <Typography
+        gutterBottom
+        fontWeight={900}
+        marginBottom={2}
+      >
         Hi, my name is
       </Typography>
 
-      <Typography variant='h3' component='h1' gutterBottom fontWeight={900} lineHeight={1} marginBottom={4}>
+      <Typography
+        variant='h3'
+        component='h1'
+        gutterBottom
+        fontWeight={900}
+        lineHeight={1}
+        marginBottom={4}
+      >
         Lukasz Szyplinski.
       </Typography>
 
-      <Typography variant='body1' component='p' gutterBottom>
-        I'm a Software Engineer from Warsaw, Poland.
+      <Typography
+        variant='body1'
+        component='p'
+        gutterBottom
+      >
+        I&apos;m a Software Engineer from Warsaw, Poland.
       </Typography>
     </Box>
-    <Avatar src='/avatar/AvatarMaker-3.svg' sx={{ width: '40%', height: '100%' }} />
+    <Avatar
+      sx={{
+        display: {
+          xs: 'none',
+          sm: 'flex'
+        },
+        width: '40%',
+        height: '100%'
+      }}
+      src='/avatar/AvatarMaker-3.svg'
+    />
   </Box>
 );
 

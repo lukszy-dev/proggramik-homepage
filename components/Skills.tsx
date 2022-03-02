@@ -51,7 +51,6 @@ const Tech: FC<TechProps> = (props) => {
         display: 'flex',
         flexDirection: 'column',
         width: '10rem',
-        padding: '1rem',
         alignItems: 'center',
         'svg': {
           marginBottom: '20px'
@@ -69,7 +68,16 @@ const Skills = () => (
   <>
     <CustomDivider label='skills' />
 
-    <Stack direction='row' justifyContent={'center'} alignItems={'center'}>
+    <Stack
+      direction='row'
+      justifyContent={'center'}
+      alignItems={'center'}
+      spacing={1}
+      sx={{
+        paddingTop: '1rem',
+        paddingBottom: '1rem'
+      }}
+    >
       {TECHS.map((element) => (
         <Tech key={element.id}>
           {({ hovered }) => (
