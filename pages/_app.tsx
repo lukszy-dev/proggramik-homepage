@@ -54,6 +54,7 @@ const MyApp: VFC<MyAppProps> = ({
 }) => (
   <CacheProvider value={emotionCache}>
     <Head>
+      <title>Łukasz Szypliński - Homepage</title>
       <meta name="viewport" content="initial-scale=1, width=device-width" />
     </Head>
     <ThemeProvider theme={theme}>
