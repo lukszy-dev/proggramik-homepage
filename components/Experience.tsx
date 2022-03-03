@@ -17,7 +17,7 @@ const POSITIONS = [
     period: 'Nov. 2017 - May. 2018',
     role: 'Software Engineer',
     company: 'FILLTR',
-    technologies: ['Java', 'Java EE', 'Hibernate', 'React']
+    technologies: ['Java', 'Java EE', 'Hibernate', 'JavaScript', 'React']
   },
   {
     id: 3,

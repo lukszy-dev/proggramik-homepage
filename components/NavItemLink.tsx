@@ -4,6 +4,7 @@ import { Link } from '@mui/material';
 const NavItemLink = styled(Link)(({ theme, underline }) => ({
   fontWeight: 700,
   borderTopWidth: 3,
+  borderTopStyle: 'solid',
   borderBottomWidth: 3,
   borderBottomStyle: 'solid',
   borderColor: 'transparent',
